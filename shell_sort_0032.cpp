@@ -30,3 +30,12 @@ void inputData(int arr[], int &n)
     }
     cout << endl;
 }
+
+void outputdata(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        cout << "\t" << "[" << arr[i] << "]";
+    }
+    cout << endl;
+}
