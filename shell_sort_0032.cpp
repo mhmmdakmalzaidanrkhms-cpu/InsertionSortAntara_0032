@@ -39,3 +39,31 @@ void outputdata(int arr[], int n)
     }
     cout << endl;
 }
+
+void shellSort(int arr[], int n)
+{
+    int t;
+
+    for (int i = n / 2; i > 0; i = i / 2)
+    {
+        for (int j = i; j < n; j++)
+        {
+            for (int k = j - i; k >= 0; k = k - i)
+            {
+                if (arr[k + i] >= arr[k])
+                {
+                    break;
+                }
+                else
+                {
+                    t = arr[k];
+                    arr[k] = arr[k + i];
+                    arr[k + i] = t;
+                }
+            }
+        }
+
+        cout << " Pengulangan Shell Sort (Gap " << i << ") : ";
+        outputdata(arr, n);
+    }
+}
